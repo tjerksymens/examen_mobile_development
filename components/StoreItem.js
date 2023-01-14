@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Pressable, TouchableWithoutFeedback, Image } from 'react-native';
+import { View, Text, StyleSheet, Pressable, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 
@@ -28,11 +28,11 @@ const StoreItem = itemprops => {
             <View>
                 <Image style={styles.imagestyle} source={{uri: itemprops.image}}/>
             </View>
-            <TouchableWithoutFeedback onPress={toggleSwitch}>
-                <Text style={styles.favorite}>{text}</Text>
-            </TouchableWithoutFeedback>
-            <Pressable style={styles.button} onPress={() => navigation.navigate("Product", {itemTitle: itemprops.title})}>
-                <Text style={styles.buttontext}>View: {itemprops.title}</Text>
+            <Pressable onPress={toggleSwitch} style={styles.favorite}>
+                <Text style={styles.favoritetext}>{text}</Text>
+            </Pressable>
+            <Pressable style={styles.button} onPress={() => navigation.navigate("Product", {itemTitle: itemprops.title, itemPrice: itemprops.price, itemImage: itemprops.image,})}>
+                <Text style={styles.buttontext}>View</Text>
             </Pressable>
       </View>
 
@@ -77,10 +77,13 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 24,
     backgroundColor: "#f2cd01",
-    display: '',
+    borderRadius: '50%',
   },
+    favoritetext:{
+        textAlign: 'center',
+    },
     imagestyle: {
-    height: 300,
+    height: 310,
   },
 });
 

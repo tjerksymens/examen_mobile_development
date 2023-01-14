@@ -65,6 +65,7 @@ const HomeScreen = ({ navigation }) => {
         ({ item }) => (
             <StoreItem
             title={item.title.rendered}
+            //yoast_head is plugin wp 
             price={item.yoast_head_json.og_description.split(' ')}
             image={item.yoast_head_json.og_image[0].url}
             />

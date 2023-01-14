@@ -1,11 +1,15 @@
 import React from 'react';
-import { StyleSheet, View, ScrollView, Text, Image } from 'react-native';
+import { StyleSheet, View, ScrollView, Text, TouchableWithoutFeedback } from 'react-native';
 
-const DetailScreen = ({ navigation }) => {
+const DetailScreen = ({ navigation, route },) => {
+    
     return (
     <ScrollView style = {styles.screen}>
         <View>
-            <Text style = {styles.header1}>Product</Text>
+            <Text style = {styles.header1}>{route.params.itemTitle}</Text>
+            <TouchableWithoutFeedback onPress={() => navigation.navigate('Store')}>
+                <Text> ⬅️  Go back to store</Text>
+            </TouchableWithoutFeedback>
         </View>
     </ScrollView>
     );

@@ -15,7 +15,7 @@
         Bv overzicht van opgeslagen items, winkelmandje etc...
 [x] Deel je app op in screens en components
 [ ] Voeg iets toe wat we niet gezien hebben, om ideeën op te doen moet je zeker de expo documentatie Links to an external site.eens bekijken.
-[ ] Denk aan de vormgeving (we hebben gezien hoe je styles kan toepassen). Een zwart/wit app zonder styling ziet er weinig afgewerkt uit.
+[x] Denk aan de vormgeving (we hebben gezien hoe je styles kan toepassen). Een zwart/wit app zonder styling ziet er weinig afgewerkt uit.
 
 Indienen
 [ ] Lever de github link van je project in

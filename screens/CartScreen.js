@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, ScrollView, Text, TouchableWithoutFeedback } from 'react-native';
+import { StyleSheet, View, ScrollView, Text, TouchableWithoutFeedback, Image, FlatList } from 'react-native';
 
 const CartScreen = ({ navigation }) => {
     return (
@@ -11,13 +11,13 @@ const CartScreen = ({ navigation }) => {
             </TouchableWithoutFeedback>
         </View>
         <View style={styles.listItem}>
-            <Text style={styles.itemtitle}>TROTTEN desk</Text>
+            <Text style={styles.itemtitle}>€249 TROTTEN desk</Text>
         </View>
         <View style={styles.listItem}>
-            <Text style={styles.itemtitle}>IDASEN desk</Text>
+            <Text style={styles.itemtitle}>€299 IDASEN desk</Text>
         </View>
         <View style={styles.listItem}>
-            <Text style={styles.itemtitle}>UPPSPEL desk</Text>
+            <Text style={styles.itemtitle}>€619 UPPSPEL desk</Text>
         </View>
     </ScrollView>
     );
@@ -35,9 +35,9 @@ const styles = StyleSheet.create({
         paddingBottom: 16,
     },
     itemtitle: {
-    color: "#000",
-    fontWeight: 'bold',
-    fontSize: 30,
+        color: "#000",
+        fontWeight: 'bold',
+        fontSize: 30,
     },
     listItem: {
         padding: 10,
@@ -46,6 +46,9 @@ const styles = StyleSheet.create({
         borderStyle: 'solid',
         borderWidth: 0.5,
         borderRadius: 24,
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
     },
 });
 export default CartScreen;

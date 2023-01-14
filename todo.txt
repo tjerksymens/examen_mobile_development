@@ -1,15 +1,15 @@
 [x] catalogus meubels
-[ ] De app maakt verbinding met je CMS om de catalogus data op te halen.
-[ ] De app downloadt data uit de je CMS in een gestructureerd formaat (json, csv, xml,...)
-[ ] De app geef de opgehaalde data weer in een overzicht (bv lijst, tegels, ...) ;
+[x] De app maakt verbinding met je CMS om de catalogus data op te halen.
+[x] De app downloadt data uit de je CMS in een gestructureerd formaat (json, csv, xml,...)
+[x] De app geef de opgehaalde data weer in een overzicht (bv lijst, tegels, ...) ;
         Let op: dit overzicht is een verzameling van items! bv. overzicht van producten.
         Zorg dat ik op een of andere manier de verkregen data kan variëren (filteren, sorteren, zoeken).
-[ ] Als ik op een van de items klik, ga ik naar een nieuw scherm, waar ik meer details over het dat geselecteerde item te zien krijg (beschrijving, datum, ...)
+[x] Als ik op een van de items klik, ga ik naar een nieuw scherm, waar ik meer details over het dat geselecteerde item te zien krijg (beschrijving, datum, ...)
         Mogelijk moet je hiervoor een nieuwe request doen.
         Maak gebruik van de juiste componenten om dit scherm visueel op te bouwen en zo veel mogelijk details weer te geven (zal afhankelijk zijn van hoeveel data je krijgt uit de API).
-[ ] Je moet iets met de items in de catalogus kunnen doen. bv. toevoegen aan winkel mandje, opslaan als favoriet, ...
+[x] Je moet iets met de items in de catalogus kunnen doen. bv. toevoegen aan winkel mandje, opslaan als favoriet, ...
         Dit hoeft niet opgeslagen te worden in het CMS, enkel in de app is voldoende.
-[ ] Maak gebruik van state waar nodig.
+[x] Maak gebruik van state waar nodig.
 [ ] Maak een 3de en een 4de scherm, deze invulling kies je zelf.
         Hierin kan je bv. de begrepen leerstof aantonen die je in de andere twee schermen niet kwijt kon.
         Bv overzicht van opgeslagen items, winkelmandje etc...

@@ -9,9 +9,13 @@ const HomeScreen = ({ navigation }) => {
 
     const getItems = async () => {
         //cms verbinden
-        const response = await fetch("https://tjerksymens.be/wp-json/wp/v2/posts?categories=9", {})
+            try{
+            const response = await fetch("https://tjerksymens.be/wp-json/wp/v2/posts?categories=9", {})
             const json = await response.json();
             setContent(json)
+            } catch (error) {
+                console.error(error);
+            }
         }
 
         //items laden
@@ -20,10 +24,20 @@ const HomeScreen = ({ navigation }) => {
         }, []);
 
 
+        //searchbar
         const getDesksByTitleSearch = async (enteredText) => {
-        const url = encodeURI("https://tjerksymens.be/wp-json/wp/v2/posts?slug=" + enteredText + "/");
-            const response = await fetch(url)
+        try {
+            if (enteredText.length > 2) {
+            const url = encodeURI("https://tjerksymens.be/wp-json/wp/v2/posts?slug=" + enteredText + "/");
+            const response = await fetch(url);
             const json = await response.json();
+            setContent(json);
+            } else{
+            getItems();
+            }
+        } catch (error) {
+            console.error(error);
+        }
     }
 
     return (
@@ -34,22 +48,25 @@ const HomeScreen = ({ navigation }) => {
                 <TouchableWithoutFeedback onPress={() => navigation.navigate('CartScreen')}>
                     <Image style = {styles.imgShoppingCart} source={require('../assets/shopping-cart.png')}/>
                 </TouchableWithoutFeedback>
-                <Text style={styles.amount}>0</Text>
+                <Text style={styles.amount}>3</Text>
             </View>
         </View>
+
         <TextInput
-            style={styles.searchfield}
+            style={styles.searchbar}
             placeholder="search a desk"
             placeholderTextColor="#1e1e1e" 
             onChangeText={getDesksByTitleSearch}
         />
     
         <FlatList
-        data={content}
+        data={content}r
         renderItem={
         ({ item }) => (
             <StoreItem
             title={item.title.rendered}
+            price={item.yoast_head_json.og_description.split(' ')}
+            image={item.yoast_head_json.og_image[0].url}
             />
         )}/>
     </ScrollView>
@@ -84,7 +101,7 @@ const styles = StyleSheet.create({
     amount: {
         paddingLeft: 25,
     },
-    searchfield: {
+    searchbar: {
         marginTop: 16,
         marginBottom: 8,
         paddingVertical: 8,

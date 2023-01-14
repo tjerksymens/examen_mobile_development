@@ -10,6 +10,15 @@ const CartScreen = ({ navigation }) => {
                 <Text> ⬅️  Go back to store</Text>
             </TouchableWithoutFeedback>
         </View>
+        <View style={styles.listItem}>
+            <Text style={styles.itemtitle}>TROTTEN desk</Text>
+        </View>
+        <View style={styles.listItem}>
+            <Text style={styles.itemtitle}>IDASEN desk</Text>
+        </View>
+        <View style={styles.listItem}>
+            <Text style={styles.itemtitle}>UPPSPEL desk</Text>
+        </View>
     </ScrollView>
     );
 }
@@ -24,6 +33,19 @@ const styles = StyleSheet.create({
         fontSize: 36,
         fontWeight: 'bold',
         paddingBottom: 16,
+    },
+    itemtitle: {
+    color: "#000",
+    fontWeight: 'bold',
+    fontSize: 30,
+    },
+    listItem: {
+        padding: 10,
+        marginVertical: 10,
+        borderColor: '#000',
+        borderStyle: 'solid',
+        borderWidth: 0.5,
+        borderRadius: 24,
     },
 });
 export default CartScreen;

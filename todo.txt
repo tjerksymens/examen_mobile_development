@@ -10,11 +10,11 @@
 [x] Je moet iets met de items in de catalogus kunnen doen. bv. toevoegen aan winkel mandje, opslaan als favoriet, ...
         Dit hoeft niet opgeslagen te worden in het CMS, enkel in de app is voldoende.
 [x] Maak gebruik van state waar nodig.
-[ ] Maak een 3de en een 4de scherm, deze invulling kies je zelf.
+[x] Maak een 3de en een 4de scherm, deze invulling kies je zelf.
         Hierin kan je bv. de begrepen leerstof aantonen die je in de andere twee schermen niet kwijt kon.
         Bv overzicht van opgeslagen items, winkelmandje etc...
 [x] Deel je app op in screens en components
-[ ] Voeg iets toe wat we niet gezien hebben, om ideeën op te doen moet je zeker de expo documentatie Links to an external site.eens bekijken.
+[x] Voeg iets toe wat we niet gezien hebben, om ideeën op te doen moet je zeker de expo documentatie Links to an external site.eens bekijken.
 [x] Denk aan de vormgeving (we hebben gezien hoe je styles kan toepassen). Een zwart/wit app zonder styling ziet er weinig afgewerkt uit.
 
 Indienen

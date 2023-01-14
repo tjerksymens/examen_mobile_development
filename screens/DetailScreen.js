@@ -9,6 +9,7 @@ const DetailScreen = ({ navigation, route },) => {
             <TouchableWithoutFeedback onPress={() => navigation.navigate('Store')}>
                 <Text> ⬅️  Go back to store</Text>
             </TouchableWithoutFeedback>
+            {/*items inladen van vorige pagina*/}
             <Text style = {styles.header1}>{route.params.itemTitle}</Text>
             <Image style = {styles.img} source={{uri: route.params.itemImage}}/>
             <Text style = {styles.header2}>{route.params.itemPrice[0]}</Text>

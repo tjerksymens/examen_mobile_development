@@ -42,6 +42,12 @@ const HomeScreen = ({ navigation }) => {
 
     return (
     <ScrollView style = {styles.screen}>
+        {/*store en shoppingcart*/}
+        <View>
+            <TouchableWithoutFeedback onPress={() => navigation.navigate('Ikea')}>
+                <Text> ⬅️  look for more cheap desks</Text>
+            </TouchableWithoutFeedback>
+        </View>
         <View style = {styles.flex}>
             <Text style = {styles.header1}>Store</Text>
             <View>
@@ -52,6 +58,7 @@ const HomeScreen = ({ navigation }) => {
             </View>
         </View>
 
+        {/*searchbar*/}
         <TextInput
             style={styles.searchbar}
             placeholder="search a desk"
@@ -60,7 +67,8 @@ const HomeScreen = ({ navigation }) => {
         />
     
         <FlatList
-        data={content}r
+        //bestanden inladen uit api
+        data={content}
         renderItem={
         ({ item }) => (
             <StoreItem
